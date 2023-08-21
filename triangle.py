@@ -59,18 +59,3 @@ maketriangle(3,"+")
 maketriangle(6,"#")
 maketriangle(9,"*")
 
-#聖誕樹
-def makexmastree(n,m):
-    for i in range(1,n+1):
-        for j in range(n-i):
-            print(" ",end="")
-        for j in range(2*i-1):
-            print(m,end="")
-        print()
-    for i in range(1,n):
-        print(" ",end="")
-    print("|")
-
-makexmastree(3,"*")
-makexmastree(6,"*")
-makexmastree(9,"*")
