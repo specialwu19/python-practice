@@ -1,27 +1,27 @@
 #直角三角形
-def makedelta(n,m):
+def makeRightTriangle(n,m):
     for i in range(1,n):
         for j in range(i):
             print(m,end=" ")
         print()
 
-makedelta(3,"+")
-makedelta(6,"#")
-makedelta(9,"*")
+makeRightTriangle(3,"+")
+makeRightTriangle(6,"#")
+makeRightTriangle(9,"*")
 
 #倒三角形
-def makereverse(n,m):
+def makeInvertedTriangle(n,m):
     for i in range(n,0,-1):
         for j in range(i):
             print(m,end="")
         print()
 
-makereverse(3,"+")
-makereverse(6,"#")
-makereverse(9,"*")
+makeInvertedTriangle(3,"+")
+makeInvertedTriangle(6,"#")
+makeInvertedTriangle(9,"*")
 
 #反向三角形
-def makervdelta(n,m):
+def makeReversedRightTriangle(n,m):
     for i in range(1,n+1):
         for j in range(n-i):
             print(" ",end="")
@@ -29,12 +29,12 @@ def makervdelta(n,m):
             print(m,end="")
         print()
 
-makervdelta(3,"+")
-makervdelta(6,"#")
-makervdelta(9,"*")
+makeReversedRightTriangle(3,"+")
+makeReversedRightTriangle(6,"#")
+makeReversedRightTriangle(9,"*")
 
 #反向倒三角形
-def makerevrese2(n,m):
+def makeRevreseInvertedTriangle(n,m):
     for i in range(n,0,-1):
         for j in range(n-i):
             print(" ",end="")
@@ -42,12 +42,12 @@ def makerevrese2(n,m):
             print(m,end="")
         print()
 
-makerevrese2(3,"+")
-makerevrese2(6,"#")
-makerevrese2(9,"*")
+makeRevreseInvertedTriangle(3,"+")
+makeRevreseInvertedTriangle(6,"#")
+makeRevreseInvertedTriangle(9,"*")
 
-#正三角形
-def maketriangle(n,m):
+#等腰三角形
+def makeIsoscelesTriangle(n,m):
     for i in range(1,n+1):
         for j in range(n-i):
             print(" ",end="")
@@ -55,12 +55,12 @@ def maketriangle(n,m):
             print(m,end="")
         print()
 
-maketriangle(3,"+")
-maketriangle(6,"#")
-maketriangle(9,"*")
+makeIsoscelesTriangle(3,"+")
+makeIsoscelesTriangle(6,"#")
+makeIsoscelesTriangle(9,"*")
 
 #聖誕樹
-def makexmastree(n,m):
+def makeXmasTree(n,m):
     for i in range(1,n+1):
         for j in range(n-i):
             print(" ",end="")
@@ -71,6 +71,6 @@ def makexmastree(n,m):
         print(" ",end="")
     print("|")
 
-makexmastree(3,"*")
-makexmastree(6,"*")
-makexmastree(9,"*")
+makeXmasTree(3,"*")
+makeXmasTree(6,"*")
+makeXmasTree(9,"*")
