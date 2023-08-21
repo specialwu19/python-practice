@@ -34,7 +34,7 @@ makeReversedRightTriangle(6,"#")
 makeReversedRightTriangle(9,"*")
 
 #反向倒三角形
-def makeRevreseInvertedTriangle(n,m): #n=高度,m=符號
+def makeReverseInvertedTriangle(n,m): #n=高度,m=符號
     for i in range(n,0,-1):
         for j in range(n-i): #第i層需要n-i個空格
             print(" ",end="")
@@ -42,9 +42,9 @@ def makeRevreseInvertedTriangle(n,m): #n=高度,m=符號
             print(m,end="")
         print()
 
-makeRevreseInvertedTriangle(3,"+")
-makeRevreseInvertedTriangle(6,"#")
-makeRevreseInvertedTriangle(9,"*")
+makeReverseInvertedTriangle(3,"+")
+makeReverseInvertedTriangle(6,"#")
+makeReverseInvertedTriangle(9,"*")
 
 #等腰三角形
 def makeIsoscelesTriangle(n,m): #n=高度,m=符號
