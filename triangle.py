@@ -1,8 +1,8 @@
 #直角三角形
 def makeRightTriangle(n,m): #n=高度,m=符號
-    for i in range(1,n):
+    for i in range(1,n+1):
         for j in range(i):
-            print(m,end=" ")
+            print(m,end="")
         print()
 
 makeRightTriangle(3,"+")
