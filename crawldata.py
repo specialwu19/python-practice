@@ -6,8 +6,8 @@ headers={
 r=req.get(url,headers=headers) #發請求
 print(r.json()) #資料分析成json格式
 
-root_json=r.json()
-for data in root_json:
+rootJson=r.json()
+for data in rootJson:
         print(f"bike stop=站點名稱:{data['站點名稱']}、站點位置:{data['站點位置']}") #print出需要的資料
         
 import requests as req
@@ -18,6 +18,6 @@ headers={
 r=req.get(url,headers=headers) #發請求
 print(r.json()) #資料分析成json格式
 
-root_json=r.json()
-for data in root_json["records"]:
+rootJson=r.json()
+for data in rootJson["records"]:
     print(f"air quality=偵測位置:{data['site']}、城市:{data['county']}、PM2.5:{data['pm25']}") #在records中，print出需要的資料
