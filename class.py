@@ -32,8 +32,8 @@ class Corgi(Dog): #多層繼承
         self.name=name
     def play(self): #覆蓋 play() method
         return "玩玩具!"
-corgi1=Corgi("柯基犬",3,5,"白色&橘黃色","土豆")
-corgi2=Corgi("柯基犬",3,6,"白色&橘黃色","露露")
+corgi1=Corgi("柯基犬",3,5,"白色&橘黃色","土豆") #多型
+corgi2=Corgi("柯基犬",3,6,"白色&橘黃色","露露") #多型
 
 print(f"這兩隻狗是{corgi1.variety}，{corgi1.variety}的移動方式是{corgi1.move()}，叫聲是{corgi1.bark()}。")
 print(f"他們分別叫做{corgi1.name}和{corgi2.name}，他們都是{corgi2._Animal__age}歲，毛色都是{corgi2.color}。")
