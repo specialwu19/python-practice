@@ -1,48 +1,44 @@
 class Animal:
     def __init__(self,variety,age):
         self.variety=variety
-        self.__age=age #私有屬性
+        self.__age=age #封裝/私有屬性
     def hungry(self):
-        return "肚子餓的時候，就吃點點心吧!"
+        return "肚子餓的時候，會找喜歡的東西吃。"
     def sleep(self):
-        return "想睡覺的時候，會找舒服的地方睡。"
-    
-dog1=Animal("柯基",3) #多型
-print(f"這隻動物是{dog1.variety},今年{dog1._Animal__age}歲。牠{dog1.sleep()}") #_Animal__age訪問私有屬性
-print(dog1.hungry())
+        return "想睡覺的時候，會找舒服的地方睡覺。"
+ani=Animal("種類","幾歲")
+print(f"這個動物是什麼{ani.variety}，年齡{ani._Animal__age}?") #_Animal__age訪問私有屬性
+print(f"動物如果{ani.hungry()}如果{ani.sleep()}")
 print()
 
-dog2=Animal("牧羊犬",2) #多型
-print(f"這隻動物是{dog2.variety},今年{dog2._Animal__age}歲。牠{dog2.sleep()}")
-print(dog2.hungry())
-print()
-
-class Cat(Animal): #繼承
-    def __init__(self,color):
+class Dog(Animal): #繼承
+    def __init__(self,weight,color):
+        self.weight=weight
         self.color=color
+    def move(self):
+        return "用四隻腳走路"
     def bark(self):
-        return "喵喵~"
-    
-cat=Cat("黑色")
-print(f"這隻動物的毛色是{cat.color},牠的叫聲是{cat.bark()}")
-
-cat=Animal("波斯貓",5)
-print(f"牠是一隻{cat.variety},今年{cat._Animal__age}歲。")
-print(cat.hungry())
+        return "汪汪"
+    def play(self):
+        return "出去玩!"
+dog=Animal("黑狗","")
+thisDog=Dog(6,"黑色")
+print(f"這個動物是{dog.variety}，這隻{dog.variety}的體重是{thisDog.weight}公斤，毛色是{thisDog.color}。")
+print(f"這隻{dog.variety}的移動方式是{thisDog.move()}，叫聲是{thisDog.bark()}，喜歡{thisDog.play()}")
 print()
 
-class Bird(Cat): #多層繼承
-    def __init__(self,move):
-        self.move=move
-    def bark(self):
-        return "啾啾!啾啾!" #覆蓋bark() method
-    
-bird=Bird("飛行")
-print(f"這隻動物移動的方式是{bird.move}。牠的叫聲是{bird.bark()}")
-
-bird=Cat("咖啡色")
-print(f"牠的毛色是{bird.color}。")
-bird=Animal("麻雀",1)
-
-print(f"牠是一隻{bird.variety},今年{bird._Animal__age}歲。")
-print(bird.sleep())
+class Corgi(Dog): #多層繼承
+    def __init__(self,name):
+        self.name=name
+    def play(self): #覆蓋 play() method
+        return "玩玩具!"
+corgi1=Corgi("土豆")
+peanuts=Dog(5,"白色&橘黃色")
+thePeanuts=Animal("柯基犬",3)
+corgi2=Corgi("露露")
+lulu=Dog(6,"白色&橘黃色")
+theLulu=Animal("柯基犬",3)
+print(f"這兩隻狗是{thePeanuts.variety}，{thePeanuts.variety}的移動方式是{lulu.move()}，叫聲是{lulu.bark()}。")
+print(f"他們分別叫做{corgi1.name}和{corgi2.name}，他們都是{theLulu._Animal__age}歲，毛色都是{peanuts.color}。")
+print(f"{corgi1.name}的體重是{peanuts.weight}公斤，{corgi2.name}的體重是{lulu.weight}公斤。")
+print(f"他們都喜歡{corgi1.play()}{theLulu.hungry()}{theLulu.sleep()}")
