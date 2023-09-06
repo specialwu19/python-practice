@@ -6,9 +6,9 @@ class Animal:
         return "肚子餓的時候，會找喜歡的東西吃。"
     def sleep(self):
         return "想睡覺的時候，會找舒服的地方睡覺。"
-ani=Animal("種類","幾歲")
-print(f"這個動物是什麼{ani.variety}，年齡{ani._Animal__age}?") #_Animal__age訪問私有屬性
-print(f"動物如果{ani.hungry()}如果{ani.sleep()}")
+animal=Animal("種類","幾歲")
+print(f"這個動物是什麼{animal.variety}，年齡{animal._Animal__age}?") #_Animal__age訪問私有屬性
+print(f"動物如果{animal.hungry()}如果{animal.sleep()}")
 print()
 
 class Dog(Animal): #繼承
