@@ -43,10 +43,10 @@ print(f"他們都喜歡{corgi1.play()}{corgi1.hungry()}{corgi1.sleep()}")
 print()
 
 class Bulldog(Dog): #多層繼承
-    def __init__(self,variety,age,weight,color,name):
-        super().__init__(variety,age,weight,color,name) #利用 super() function
+    def __init__(self,age,weight,color,name):
+        super().__init__("鬥牛犬",age,weight,color,name) #利用 super() function
     def sleep(self): #覆蓋 sleep() method
         return "睡覺的時候，會打呼。"
-bulldog=Bulldog("鬥牛犬",5,8,"米白色","憨吉")
+bulldog=Bulldog(5,8,"米白色","憨吉")
 print(f"這隻狗是{bulldog.variety}，名字叫{bulldog.name}，今年{bulldog._Animal__age}歲，體重{bulldog.weight}公斤，毛色是{bulldog.color}。")
 print(f"{bulldog.name}{bulldog.hungry()}{bulldog.sleep()}喜歡{bulldog.play()}")
